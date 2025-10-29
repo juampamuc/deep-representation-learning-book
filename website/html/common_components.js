@@ -278,10 +278,16 @@ The following are (unofficial) community translations of the book.
       techDetails: `
 The BookQA series of models is designed to help readers understand the book's content. It can answer questions about the material and give clear explanations of the key concepts and theories. To build these models, we first use [EntiGraph](https://arxiv.org/pdf/2409.07431) to generate a rich set of book-related data by linking sampled entities from the text. We then continually pre-train [Qwen2.5-7B/32B-Instruct](https://huggingface.co/Qwen/Qwen2.5-7B-Instruct) on this data using auto-regressive training. We also incorporate instruction-following data during training such that the model can learn new knowledge from the book without forgetting basic chatting skills. The BookQA 7B model currently powers the "Ask AI" button in the top bar of this website.
       `,
+      lightRAGDetails: `
+LightRAG employs a comprehensive parsing pipeline to process course materials with fine granularity, extracting accurate textual fragments from lecture slides and supplementary documents. Beyond basic text extraction, the system conducts sophisticated entity and relation extraction on both textual content and multimodal entities present within the materials. This extraction process enables the construction of a fine-grained, large-scale knowledge graph that systematically interconnects concepts, definitions, and contextual information across the curriculum.
+When a user query is received, LightRAG leverages this structured knowledge representation to retrieve the most relevant knowledge fragments from a global perspective. By synthesizing the logical abstractions encoded in both the entities and their relational structures, the system generates responses that are not only accurate and contextually appropriate but also fully traceable back to specific source materials. This traceability ensures transparency and enables users to verify the provenance of generated answers, making LightRAG particularly well-suited for educational scenarios where source validation is critical.
+BookQA 7B model with LightRAG is intergrated into the "Ask AI" button in the top bar of this website.
+      `,
       sections: {
         aiAssistants: "AI Assistants",
         aiTools: "AI Tools",
         customizedChatbots: "BookQA Series",
+        lightRAG: "LightRAG",
       },
       // badges removed
     },

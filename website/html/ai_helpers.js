@@ -11,23 +11,9 @@
       name: "BookQA-32B-Instruct",
       affil: "",
       link: "https://huggingface.co/tianzhechu/BookQA-32B-Instruct",
-    },
+    }
   ];
 
-  const AI_TOOLS = [
-    {
-      name: "GitHub Copilot",
-      affil: "Microsoft",
-    },
-    {
-      name: "Cursor AI",
-      affil: "Cursor",
-    },
-    {
-      name: "ChatGPT",
-      affil: "OpenAI",
-    },
-  ];
 
   // Top bar and sidebar are inserted by common.js
 
@@ -92,6 +78,20 @@
         ),
         (window.get_text_block &&
           window.get_text_block("aiHelpers.techDetails", "tech-details")) ||
+          null
+      ),
+      React.createElement(
+        "section",
+        { "aria-label": "LightRAG", style: { marginTop: "32px" } },
+        React.createElement(
+          "h2",
+          { style: { margin: "16px 0 8px", fontSize: "18px" } },
+          (window.get_text_inline &&
+            window.get_text_inline("aiHelpers.sections.lightRAG")) ||
+            ""
+        ),
+        (window.get_text_block &&
+          window.get_text_block("aiHelpers.lightRAGDetails", "tech-details")) ||
           null
       )
     );
