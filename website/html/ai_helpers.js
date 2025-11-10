@@ -1,18 +1,8 @@
 (function () {
   // Use global get_text from common.js
 
-  const AI_ASSISTANTS = [
-    {
-      name: "BookQA-7B-Instruct",
-      affil: "",
-      link: "https://huggingface.co/tianzhechu/BookQA-7B-Instruct",
-    },
-    {
-      name: "BookQA-32B-Instruct",
-      affil: "",
-      link: "https://huggingface.co/tianzhechu/BookQA-32B-Instruct",
-    }
-  ];
+  const AI_ASSISTANTS =
+    (window.get_text && window.get_text("aiHelpers.assistants")) || [];
 
 
   // Top bar and sidebar are inserted by common.js
@@ -61,7 +51,11 @@
       })(),
       React.createElement(
         "section",
-        { "aria-label": "BookQA Series" },
+        {
+          "aria-label":
+            (window.get_text &&
+              window.get_text("aiHelpers.sections.customizedChatbots")) || "",
+        },
         React.createElement(
           "h2",
           { style: { margin: "16px 0 8px", fontSize: "18px" } },
@@ -82,7 +76,12 @@
       ),
       React.createElement(
         "section",
-        { "aria-label": "LightRAG", style: { marginTop: "32px" } },
+        {
+          "aria-label":
+            (window.get_text &&
+              window.get_text("aiHelpers.sections.lightRAG")) || "",
+          style: { marginTop: "32px" },
+        },
         React.createElement(
           "h2",
           { style: { margin: "16px 0 8px", fontSize: "18px" } },
