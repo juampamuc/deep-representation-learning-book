@@ -5,7 +5,7 @@
     nav: {
       aiTools: "AI Tools",
       aiHelpers: "AI Helpers",
-      community: "Community",
+      community: "Courses, Talks, and Community Contributions",
       contributors: "Contributors",
       howToContribute: "How to Contribute?",
     },
@@ -238,8 +238,8 @@ This book would have not been possible without the financial support for these r
 
     // Community page content
     community: {
-      title: "Community",
-      intro: "Community resources and materials for the book.",
+      title: "Courses, Talks, and Community Contributions",
+      intro: "Courses, talks, tutorials, and other community contributions related to the book.",
       pending: "Coming soon.",
       sections: {
         tutorials: "Tutorials",
